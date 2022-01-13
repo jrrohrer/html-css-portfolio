@@ -1,0 +1,183 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+  --mint: #B9D7C8;
+  --ltgray: #D9D9D9;
+  --cream: #F2EDEB;
+  --aqua: #65A99E;
+  --gold: #A68953;
+  --black: #0D0D0D;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Full Page Styling */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--cream);
+  font-size: var(--font-size);
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--aqua);
+}
+
+a:hover {
+  color: var(--mint);
+  text-decoration: none;
+}
+
+/* Navbar Styles */
+
+nav {
+  font-family: var(--mono);
+  font-size: 80%; /* proportionately scales everything down; keeps differences between h1 and li elements */
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; /*horizontal axis*/
+  align-items: center; /*vertical axis*/
+  gap: 2rem; /*new flexbox property that assigns space between items */
+}
+
+nav li:first-child {
+  flex-basis: 100%; /* automatically pushes it onto its own line, li is now on it's own row */
+  text-align: center;
+}
+
+nav [class*='fa-'] { /* looking for a partial match to a classname */
+  font-size: 150%;
+  color: var(--aqua)
+}
+
+nav h1 [class*='fa-'] {
+  font-size: 90%;
+  color: var(--gold)
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cream);
+  display: block;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+nav [class*='fa-']:hover {
+  color: var(--gold)
+}
+
+.button {
+  background-color: var(--gold);
+  color: var(--black);
+  font-weight: bold;
+  padding: 0.33rem;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: var(--white);
+  background-color: var(--aqua);
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
+/* Intro Section Styles */
+
+#intro {
+  padding-bottom: 10rem;
+}
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#intro .name {
+  font-family: var(--mono);
+}
+
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--aqua);
+  display: block;
+}
+
+#intro h2 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+/* Contact Section Styles */
+
+#contact {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+#contact button {
+  margin-top: 3rem;
+}
+
+/* Footer Styles */
+
+footer {
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; /*horizontal axis*/
+  align-items: center; /*vertical axis*/
+  gap: 2rem;
+}
+
+footer [class*='fab'] {
+  font-size: 3rem;
+}
