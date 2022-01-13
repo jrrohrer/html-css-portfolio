@@ -157,8 +157,8 @@ nav [class*='fa-']:hover {
   padding: 3rem 0;
 }
 
-#contact button {
-  margin-top: 3rem;
+#contact a {
+  text-decoration: none;
 }
 
 /* Footer Styles */
