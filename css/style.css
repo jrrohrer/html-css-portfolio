@@ -1,11 +1,12 @@
 /* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 :root {
-  --mint: #B9D7C8;
-  --ltgray: #D9D9D9;
-  --cream: #F2EDEB;
-  --aqua: #65A99E;
-  --gold: #A68953;
-  --black: #0D0D0D;
+  --black: #171321;
+  --dkblue: #0d314b;
+  --plum: #4b0d49;
+  --hotmag: #ff17e4;
+  --magenta: #e310cb;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
   --font-size: 1.3rem;
   --mono: "Oxygen mono", monospace;
   --sans: Oxygen, sans-serif;
@@ -27,7 +28,7 @@ body {
   margin: 0;
   font-family: var(--sans);
   background-color: var(--black);
-  color: var(--cream);
+  color: var(--white);
   font-size: var(--font-size);
 }
 
@@ -36,12 +37,26 @@ h1, h2, h3 {
 }
 
 a {
-  color: var(--aqua);
+  color: var(--magenta);
 }
 
 a:hover {
-  color: var(--mint);
+  color: var(--hotmag);
   text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* background color divs */
+
+.section-plum {
+  background-color: var(--plum);
+}
+
+.section-blue {
+  background-color: var(--dkblue);
 }
 
 .gradient {
@@ -55,7 +70,7 @@ a:hover {
 nav {
   font-family: var(--mono);
   font-size: 80%; /* proportionately scales everything down; keeps differences between h1 and li elements */
-  padding: 1rem;
+  padding: 4rem 1rem;
 }
 
 nav h1 a {
@@ -85,26 +100,22 @@ nav [class*='fa-'] { /* looking for a partial match to a classname */
 
 nav h1 [class*='fa-'] {
   font-size: 90%;
-  color: var(--gold)
+  color: var(--aqua)
 }
 
 nav a {
   text-decoration: none;
-  color: var(--cream);
+  color: var(--white);
   display: block;
 }
 
-nav a:hover {
-  color: var(--gold);
-}
-
-nav [class*='fa-']:hover {
-  color: var(--gold)
+nav a:hover, nav [class*='fa-']:hover  {
+  color: var(--magenta);
 }
 
 .button {
-  background-color: var(--gold);
-  color: var(--black);
+  background-color: var(--magenta);
+  color: white;
   font-weight: bold;
   padding: 0.5rem;
   border-radius: 5px;
@@ -113,27 +124,17 @@ nav [class*='fa-']:hover {
 }
 
 .button:hover {
-  color: var(--white);
-  background-color: var(--aqua);
+  color: white;
+  background-color: var(--hotmag);
 }
 
-@media (min-width: 850px) {
-  nav {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  nav li:first-child {
-    flex-basis: auto;
-    text-align: left;
-    margin-right: auto;
-  }
-}
+
 
 /* Intro Section Styles */
 
 #intro {
   padding: 4rem 1rem 10rem 1rem;
+  padding-bottom: 10rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -144,6 +145,7 @@ nav [class*='fa-']:hover {
 
 #intro .name {
   font-family: var(--mono);
+  font-size: 1rem;
 }
 
 .name span {
@@ -151,6 +153,7 @@ nav [class*='fa-']:hover {
   font-size: 4rem;
   color: var(--aqua);
   display: block;
+  font-weight: 300;
 }
 
 #intro h2 {
@@ -160,12 +163,23 @@ nav [class*='fa-']:hover {
 
 /* Portfolio Section Styles */
 
-.section-ltgray {
-  background-color: var(--ltgray);
+#portfolio {
+  padding: 4rem 1rem;
 }
 
-#portfolio {
-  color: var(--black);
+#portfolio h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#portfolio h3 {
+  color: var(--aqua);
+}
+
+#portfolio h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
 }
 
 /* Contact Section Styles */
@@ -175,11 +189,6 @@ nav [class*='fa-']:hover {
   text-align: center;
   margin: 0 auto;
   padding: 3rem 0;
-  color: black;
-}
-
-.section-white {
-  background-color: var(--cream);
 }
 
 /* Footer Styles */
@@ -202,4 +211,17 @@ footer ul {
 
 footer [class*='fab'] {
   font-size: 3rem;
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
 }
