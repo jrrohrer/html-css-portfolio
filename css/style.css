@@ -161,22 +161,22 @@ nav a:hover, nav [class*='fa-']:hover  {
   font-weight: normal;
 }
 
-/* Portfolio Section Styles */
+/* Portfolio/About Section Styles */
 
-#portfolio {
+#portfolio, #about {
   padding: 4rem 1rem;
 }
 
-#portfolio h2 {
+#portfolio, #about h2 {
   font-size: 2.5rem;
   margin-bottom: calc(2.5rem * 1.5);
 }
 
-#portfolio h3 {
+#portfolio, #about h3 {
   color: var(--aqua);
 }
 
-#portfolio h4 {
+#portfolio, #about h4 {
   font-size: 1rem;
   font-family: var(--mono);
   margin: 0;
@@ -191,7 +191,7 @@ nav a:hover, nav [class*='fa-']:hover  {
   line-height: 1.5;
 }
 
-#portfolio ul {
+#portfolio, #about ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -202,7 +202,7 @@ nav a:hover, nav [class*='fa-']:hover  {
   font-size: 1rem;
 }
 
-#portfolio img {
+#portfolio, #about img {
   width: 100%;
   margin: 2rem 0 4rem 0;
   padding: 1rem;
@@ -262,7 +262,7 @@ footer [class*='fab'] {
     gap: 1rem;
   }
 
-  #portfolio img {
+  #portfolio, #about img {
     grid-column: 1/6;
     grid-row: 1/2;
   }
@@ -274,7 +274,7 @@ footer [class*='fab'] {
     grid-row: 1/2;
   }
 
-  #portfolio ul {
+  #portfolio, #about ul {
     justify-content: flex-end;
   }
 
