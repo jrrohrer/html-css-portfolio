@@ -262,9 +262,15 @@ footer [class*='fab'] {
     gap: 1rem;
   }
 
-  #portfolio, #about img {
+  #portfolio img {
     grid-column: 1/6;
     grid-row: 1/2;
+  }
+
+  #about img {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    width: 75%;
   }
 
   .text {
